@@ -21,9 +21,10 @@ class LRUCache(BaseCaching):
         if key and item:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 if key not in self.keys:
+                    val = self.keys[0]
                     del self.cache_data[self.keys[0]]
                     del self.keys[0]
-                    print('DISCARD:', self.keys[0])
+                    print('DISCARD:', val)
                 else:
                     self.keys.remove(key)
             self.cache_data[key] = item
