@@ -5,6 +5,7 @@ that caches data in a dictionary
 """
 from base_caching import BaseCaching
 
+
 class FIFOCache(BaseCaching):
     """
     This class was genrated by AI as a test and it works perfectly
