@@ -6,7 +6,16 @@ Simple flask web app with extension that works with translations
 
 from flask_babel import Babel
 from flask import Flask, render_template
-from config import Config
+
+
+class Config():
+    """
+    Babel configuration class
+    """
+    LANGUAGES = ['en', 'fr']
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
+
 
 app = Flask(__name__)
 
