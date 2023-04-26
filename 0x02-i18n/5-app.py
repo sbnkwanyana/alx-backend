@@ -6,7 +6,7 @@ Simple flask web app with extension that works with translations
 
 from typing import Dict, Union
 from flask_babel import Babel
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, g
 
 
 class Config():
@@ -64,6 +64,14 @@ def get_user() -> Union[Dict, None]:
     if login_id:
         return users.get(int(login_id))
     return None
+
+
+@app.before_request
+def before_request() -> None:
+    """Performs some routines before each request's resolution.
+    """
+    user = get_user()
+    g.user = user
 
 
 if __name__ == "__main__":
