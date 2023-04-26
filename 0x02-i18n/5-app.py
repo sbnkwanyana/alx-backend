@@ -18,18 +18,18 @@ class Config():
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
+app = Flask(__name__)
+
+app.config.from_object(Config)
+
+babel = Babel(app)
+
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
     3: {"name": "Spock", "locale": "kg", "timezone": "Vulcan"},
     4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"},
 }
-
-app = Flask(__name__)
-
-app.config.from_object(Config)
-
-babel = Babel(app)
 
 
 @app.route("/")
@@ -68,7 +68,8 @@ def get_user() -> Union[Dict, None]:
 
 @app.before_request
 def before_request() -> None:
-    """Performs some routines before each request's resolution.
+    """
+    Performs some routines before each request's resolution.
     """
     user = get_user()
     g.user = user
