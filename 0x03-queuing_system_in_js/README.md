@@ -19,3 +19,7 @@
 ### 8. Track progress and errors with Kue: Create the Job creator
 
 ### 9. Track progress and errors with Kue: Create the Job processor
+
+### 10. Writing the job creation function
+
+### 11. Writing the test for job creation
