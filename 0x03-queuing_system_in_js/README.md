@@ -9,3 +9,5 @@
 ### 3. Node Redis client and async operations
 
 ### 4. Node Redis client and advanced operations
+
+### 5. Node Redis client publisher and subscriber
