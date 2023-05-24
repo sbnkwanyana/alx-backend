@@ -15,3 +15,5 @@
 ### 6. Create the Job creator
 
 ### 7. Create the Job processor
+
+### 8. Track progress and errors with Kue: Create the Job creator
