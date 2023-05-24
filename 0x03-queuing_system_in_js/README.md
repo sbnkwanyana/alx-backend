@@ -13,3 +13,5 @@
 ### 5. Node Redis client publisher and subscriber
 
 ### 6. Create the Job creator
+
+### 7. Create the Job processor
