@@ -11,3 +11,5 @@
 ### 4. Node Redis client and advanced operations
 
 ### 5. Node Redis client publisher and subscriber
+
+### 6. Create the Job creator
